@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>周某人的简历</title>
+  </head>
+  <body>
+    <div id="html"></div>
+    <div id="divBox">
+      <div id="div"></div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #html {
+        word-wrap: break-word;
+      }
+      #div {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+      }
+      /* 伪元素 */
+      #div::before {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+      #div::after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+      @media screen and (max-width: 500px) {
+        #html {
+          height: 50vh;
+          overflow: auto;
+        }
+        #divBox {
+          display: inline-block;
+          position: relative;
+          height: 50vh;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        #div {
+          position: relative;
+          top: 10px;
+          left: 0;
+        }
+      }
+    </style>
+    <style id="style"></style>
+    <script src="main.js"></script>
+  </body>
+</html>
